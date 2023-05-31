@@ -1,6 +1,4 @@
-# DS105
-
-## FINAL TITLE HERE
+## An Analysis of Female Artists
 
 Group Members: Tea Hassan
 
