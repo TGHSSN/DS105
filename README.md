@@ -12,6 +12,15 @@ Our Interest was sparked when visiting an exhibition by the Guerrilla Girls at t
 
 ![Figure 1: Guerilla Girls Poster (Source: The Guerilla Girls, 2012)  \label{fig1}](./figs/ggposter.png)
 
+When asked to create a billboard for the Public Art Fund, the Guerrilla Girls seized the opportunity to create something that would resonate with a wide audience. To gather data, they visited the Metropolitan Museum of Art and compared the number of women artists on display to the number of artworks featuring naked female bodies. The findings were eye-opening. However, the Public Art Fund rejected the billboard design, citing a lack of clarity. Undeterred, the Guerrilla Girls published their findings as an advertisement on New York City buses instead. Since then, they’ve done a few recounts are here are a few numbers: 
+
+| Year  | Percentage of female artists |
+|:-----:|:----------------------------------------------------------------------------------------------:|
+| 1989  | Less than 5% of artists in the Modern Art sections are women, but 85% of the nudes are female. |
+| 2005	| Less than 3% of artists in the Modern Art sections are women, but 83% of the nudes are female. |
+| 2012	| Less than 4% of artists in the Modern Art sections are women, but 76% of the nudes are female. |
+
+
 ## Data Collection
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel erat in ligula gravida tincidunt vitae in tellus. Suspendisse ultrices tortor ac odio mattis volutpat. Integer aliquet turpis quis elit egestas vulputate ac eu mauris. Praesent ac lacus id nulla venenatis semper porta eu lacus. Integer nec pretium lorem. Sed at massa tincidunt, mollis quam ut, consequat massa. Praesent eu diam quam. Nulla auctor dolor quam. Vestibulum cursus quis turpis vitae dictum. Sed quis ipsum purus. Nunc eu eleifend tortor. Maecenas quis eros ut urna semper auctor in ac magna. In hac habitasse platea dictumst. Nullam dolor risus, mollis a.
