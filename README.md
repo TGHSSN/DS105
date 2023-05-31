@@ -20,6 +20,13 @@ When asked to create a billboard for the Public Art Fund, the Guerrilla Girls se
 | 2005	| Less than 3% of artists in the Modern Art sections are women, but 83% of the nudes are female. |
 | 2012	| Less than 4% of artists in the Modern Art sections are women, but 76% of the nudes are female. |
 
+Interestingly, unlike what we would have thought, the number of female artists exposed at the Met Museum decreased over the years! 
+
+Here are a few more of their insightful projects:
+
+Exampl 1             | Example 2
+:------------------: | :-------------------:
+![](./figs/moma.png) | ![](./figs/moma.png)  
 
 ## Data Collection
 
