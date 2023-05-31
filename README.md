@@ -24,21 +24,49 @@ Interestingly, unlike what we would have thought, the number of female artists e
 
 Here are a few more of their insightful projects:
 
-Exampl 1             | Example 2
-:------------------: | :-------------------:
-![](./figs/moma.png) | ![](./figs/moma.png)  
 
-## Data Collection
+## Data Sources
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel erat in ligula gravida tincidunt vitae in tellus. Suspendisse ultrices tortor ac odio mattis volutpat. Integer aliquet turpis quis elit egestas vulputate ac eu mauris. Praesent ac lacus id nulla venenatis semper porta eu lacus. Integer nec pretium lorem. Sed at massa tincidunt, mollis quam ut, consequat massa. Praesent eu diam quam. Nulla auctor dolor quam. Vestibulum cursus quis turpis vitae dictum. Sed quis ipsum purus. Nunc eu eleifend tortor. Maecenas quis eros ut urna semper auctor in ac magna. In hac habitasse platea dictumst. Nullam dolor risus, mollis a.
+The Official MoMa Data Set 
 
-```Python3
-import requests
-import csv
-from bs4 import BeautifulSoup
-```
+As we started looking for data, we came across the official MoMa Data set in the form of two CSV files, one with listing artists one listing artworks, published on GitHub. 
+The Museum of Modern Art (MoMA) is a highly influential institution, making it essential for understanding the role of women in art. As a renowned museum with a vast collection, studying MoMA allows us to gain insights into the representation and contributions of women artists throughout history. By examining its exhibition history, we can trace the evolving narrative of women's participation in the art world.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel erat in ligula gravida tincidunt vitae in tellus. Suspendisse ultrices tortor ac odio mattis volutpat. Integer aliquet turpis quis elit egestas vulputate ac eu mauris. Praesent ac lacus id nulla venenatis semper porta eu lacus. Integer nec pretium lorem. Sed at massa tincidunt, mollis quam ut, consequat massa. Praesent eu diam quam. Nulla auctor dolor quam. Vestibulum cursus quis turpis vitae dictum. Sed quis ipsum purus. Nunc eu eleifend tortor. Maecenas quis eros ut urna semper auctor in ac magna. In hac habitasse platea dictumst. Nullam dolor risus, mollis a.
+The Museum of Modern Art (MoMA) is a highly influential institution, making it essential for understanding the role of women in art. As a renowned museum with a vast collection, studying MoMA allows us to gain insights into the representation and contributions of women artists throughout history. By examining its exhibition history, we can trace the evolving narrative of women's participation in the art world.
+
+![Figure 3: The MoMa \label{fig3}](./figs/momapicture)
+
+Dataset Characteristics
+
+•	Data Volume: 138,185 artworks by 15,244 artists 
+•	Dataset includes:
+- Basic metadata for each artist 
+-  Name 
+-  Nationality 
+-  Gender 
+-  Birth and death year 
+-  Wiki QID 
+-  Getty ULAN ID 
+
+The Artsy API 
+
+To enhance our analysis on women in art and not limit ourselves to one museum, we incorporated data from the Artsy API. By leveraging the extensive resources provided by Artsy, including information on artworks, artists, exhibitions, and galleries, we were able to enrich our understanding of the representation and experiences of women in the art world. The integration of Artsy API data allowed us to gather comprehensive insights and broaden the scope of our project, providing a more holistic view of women's contributions and challenges within the art community.
+
+Artsy is an online platform that provides an extensive array of art-related services, encompassing art commerce, education, and a robust database. Established in 2009, Artsy boasts an exceptional database featuring over 1 million artworks and 100,000 artists, making it a highly comprehensive and valuable online resource for art information. Its offerings contribute to a thriving ecosystem for art enthusiasts, collectors, and professionals seeking unparalleled access to the art world. The Artsy API is an interface that allows developers to access and retrieve art-related data from the Artsy platform. It provides us with a structured way to interact with the vast collection of artworks, artists, exhibitions, and galleries stored in the Artsy database. 
+
+![Figure 4: Arsty Picture \label{fig4}](./figs/artsypicture)
+
+Dataset Characteristics 
+
+•	Data Volume: over 1 million artworks by more than 100,000 artists
+•	Dataset includes:
+-	Artist info: name, dates, nationality, bio
+-	Artwork info: title, medium, date, dimensions, provenance and exhibition history
+-	Gallery and museum info: name, location and exhibitions hosted 
+-	Auction data: sale date, auction house, sale price and lot number 
+-	Art market analysis: pricing trends, artist popularity and market outlook
+-	Collection and curation data
+
 
 |  Variable 1    | Variable 2  |  Variable 3  | Variable 4   | Variable 6    |  Variable 6             |       Variable 7     | 
 |:--------------:|:-----------:|:------------:|:------------:|:-------------:|:-----------------------:|:--------------------:|
@@ -47,11 +75,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel erat in ligul
 | C              |       3     |      7       |       11     |        15     |          19             |             23       |  
 | D              |       4     |      8       |       12     |        16     |          20             |             24       |   
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel erat in ligula gravida tincidunt vitae in tellus. Suspendisse ultrices tortor ac odio mattis volutpat. Integer aliquet turpis quis elit egestas vulputate ac eu mauris. Praesent ac lacus id nulla venenatis semper porta eu lacus. Integer nec pretium lorem. Sed at massa tincidunt, mollis quam ut, consequat massa. Praesent eu diam quam. Nulla auctor dolor quam. Vestibulum cursus quis turpis vitae dictum. Sed quis ipsum purus. Nunc eu eleifend tortor. Maecenas quis eros ut urna semper auctor in ac magna. In hac habitasse platea dictumst. Nullam dolor risus, mollis a.
 
-## Exploratory Data Analysis
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel erat in ligula gravida tincidunt vitae in tellus. Suspendisse ultrices tortor ac odio mattis volutpat. Integer aliquet turpis quis elit egestas vulputate ac eu mauris. Praesent ac lacus id nulla venenatis semper porta eu lacus. Integer nec pretium lorem. Sed at massa tincidunt, mollis quam ut, consequat massa. Praesent eu diam quam. Nulla auctor dolor quam. Vestibulum cursus quis turpis vitae dictum. Sed quis ipsum purus. Nunc eu eleifend tortor. Maecenas quis eros ut urna semper auctor in ac magna. In hac habitasse platea dictumst. Nullam dolor risus, mollis a.
+## Methodology
+
+1) Data Collection and Data Wrangling 
+
+Data Collection MoMa Dataset
+
+To extract the relevant data, we wanted from the two CSV files we had to go through a few manipulations, to make the data more readable: 
+
+![Figure 5: Arsty Picture \label{fig5}](./figs/momacollectionmethod)
+
+Data Collection Artsy API 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel erat in ligula gravida tincidunt vitae in tellus. Suspendisse ultrices tortor ac odio mattis volutpat. Integer aliquet turpis quis elit egestas vulputate ac eu mauris. Praesent ac lacus id nulla venenatis semper porta eu lacus. Integer nec pretium lorem. Sed at massa tincidunt, mollis quam ut, consequat massa. Praesent eu diam quam. Nulla auctor dolor quam. Vestibulum cursus quis turpis vitae dictum. Sed quis ipsum purus. Nunc eu eleifend tortor. Maecenas quis eros ut urna semper auctor in ac magna. In hac habitasse platea dictumst. Nullam dolor risus, mollis a.
 
