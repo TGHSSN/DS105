@@ -59,7 +59,8 @@ Artsy is an online platform that provides an extensive array of art-related serv
 Dataset Characteristics 
 
 •	Data Volume: over 1 million artworks by more than 100,000 artists
-•	Dataset includes:
+
+Dataset includes:
 -	Artist info: name, dates, nationality, bio
 -	Artwork info: title, medium, date, dimensions, provenance and exhibition history
 -	Gallery and museum info: name, location and exhibitions hosted 
