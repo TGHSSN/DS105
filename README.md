@@ -252,3 +252,8 @@ In conclusion, the underrepresentation of female artists in the art world is a s
 The analysis conducted aimed to expand on the Guerrilla Girls' efforts by providing a broader and more comprehensive examination of gender representation in art across different countries and museums. The findings confirmed the existing gender imbalance, with a significantly higher number of male artists compared to female artists. However, there were indications of progress over time, with a growing proportion of female artists being represented in museums. The analysis also revealed that the underrepresentation issue extends beyond gender, as many countries are not adequately represented in the art world. This lack of diversity calls for greater efforts to promote inclusivity and provide platforms for artists from diverse backgrounds to showcase their work.
 
 Finally, the art world must address the biases and inequalities that persist in order to create a more inclusive and representative environment. It is crucial to recognise and celebrate the contributions of female artists and artists from underrepresented groups, ensuring that their voices and perspectives are heard and appreciated. Only by embracing diversity and challenging the existing norms can the art world truly reflect the rich and varied experiences of humanity.
+
+CONTRIBUTIONS
+-	Téa: Data Extraction, Data Cleaning, Website Building, Visualisation, Documentation
+-	Nicholas: Visualisation
+
