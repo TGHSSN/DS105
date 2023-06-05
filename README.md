@@ -1,14 +1,11 @@
-## An Analysis of Female Artists
+# An Analysis of Female Artists
 
-<<<<<<< HEAD
-Group Members: Téa Hassan
-
-Abstract / Summary
+Abstract
 
 This project explores the underrepresentation of women in the art world and the mission of the Guerrilla Girls, a feminist art collective, to address gender and racial inequalities in the arts community. It discusses their use of culture jamming tactics to bring attention to disparities and discrimination within museums. It also highlights the Guerrilla Girls' findings regarding the low percentage of women artists exhibited compared to the prevalence of artworks featuring naked female bodies. Inspired by their work, the project outlines the aims of conducting a comprehensive analysis to examine the portrayal and representation of women in art history, the potential impact of societal changes on women artists' representation, and the broader underrepresentation of artists from various countries.
 
 =======
-Group Members: Tea Hassan, Nicholas Ngan
+Group Members: Tea Hassan, , Nicholas Ngan
 
 ## Motivation
 
@@ -40,6 +37,7 @@ Here are a few more of their insightful projects:
 With all these numbers under our eyes, we couldn’t help but want to expand on the existing analysis. Indeed, while ground-breaking, The Guerrilla Girls’ projects were often restricted to a single exhibition or museum. We believed that we had the right tools at hand to conduct a multi-level analysis, that did not limit itself to a country or museum.
 
 ### Initials Aims
+
 •	How has the portrayal of women changed throughout history?
 •	As women are given more independence in society, are women artists being more represented in museums?
 •	Why are there so little female artists? Or are they just underrepresented?
@@ -88,18 +86,16 @@ Dataset includes:
 -	Art market analysis: pricing trends, artist popularity and market outlook
 -	Collection and curation data
 
-
 ## Methodology
 
-1) Data Collection and Data Wrangling
+### Data Collection and Data Wrangling
 
-Data Collection MoMa Dataset
+#### Data Collection MoMa Dataset
 
 We collected the two CSV files from the Official MoMa GitHub Page:
 https://github.com/MuseumofModernArt/collection
 
 To extract the relevant data, we wanted from the two CSV files we had to go through a few manipulations, to make the data more readable:
-
 
 ![Figure 6: Methodology \label{fig5}](./figs/method1.png)
 
@@ -112,7 +108,6 @@ Data Collection Artsy API
 Working with the Artsy API was a more challenging endeavour. Between our final presentation and the project some time had passed, and the API had been completely updated, which meant the code we had so far did not work and we had to start all over.
 
 The steps we followed are detailed in the chart below:
-
 
 ![Figure 7: Methodology \label{fig7}](./figs/method2.png)
 
@@ -130,8 +125,7 @@ Then, we have to reshape the datasets so that they had the same column names. We
 
 Finally, we merged these two data sets and saved the final dataset into a csv file merged.csv.
 
-
-Cleaning The Data Frames
+## Cleaning The Data Frames
 
 To clean up the data, we created a code that defined a function called 'extract_year' that extracts the year from a given date. It removes whitespace from the 'Date' column in the 'artsy' data frame and converts it to numeric values. It also removes brackets from the 'Gender' and 'Nationality' columns in the 'moma' data frame and applies the 'extract_year' function to the 'Date' column to extract the year.
 
