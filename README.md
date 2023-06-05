@@ -4,7 +4,6 @@ Abstract
 
 This project explores the underrepresentation of women in the art world and the mission of the Guerrilla Girls, a feminist art collective, to address gender and racial inequalities in the arts community. It discusses their use of culture jamming tactics to bring attention to disparities and discrimination within museums. It also highlights the Guerrilla Girls' findings regarding the low percentage of women artists exhibited compared to the prevalence of artworks featuring naked female bodies. Inspired by their work, the project outlines the aims of conducting a comprehensive analysis to examine the portrayal and representation of women in art history, the potential impact of societal changes on women artists' representation, and the broader underrepresentation of artists from various countries.
 
-=======
 Group Members: Tea Hassan, , Nicholas Ngan
 
 ## Motivation
@@ -44,7 +43,7 @@ With all these numbers under our eyes, we couldn’t help but want to expand on 
 
 ## Data Sources
 
-The Official MoMa Data Set
+### The Official MoMa Data Set
 
 As we started looking for data, we came across the official MoMa Data set in the form of two CSV files, one with listing artists one listing artworks, published on GitHub.
 The Museum of Modern Art (MoMA) is a highly influential institution, making it essential for understanding the role of women in art. As a renowned museum with a vast collection, studying MoMA allows us to gain insights into the representation and contributions of women artists throughout history. By examining its exhibition history, we can trace the evolving narrative of women's participation in the art world.
@@ -55,10 +54,9 @@ The Museum of Modern Art (MoMA) is a highly influential institution, making it e
 
 Dataset Characteristics
 
-•	Data Volume: 138,185 artworks by 15,244 artists
-•	Dataset includes:
+The Data Volume is 138,185 artworks by 15,244 artists. Dataset includes:
 
-- Basic metadata for each artist
+-  Basic metadata for each artist
 -  Name
 -  Nationality
 -  Gender
@@ -66,7 +64,7 @@ Dataset Characteristics
 -  Wiki QID
 -  Getty ULAN ID
 
-The Artsy API
+### The Artsy API
 
 To enhance our analysis on women in art and not limit ourselves to one museum, we incorporated data from the Artsy API. By leveraging the extensive resources provided by Artsy, including information on artworks, artists, exhibitions, and galleries, we were able to enrich our understanding of the representation and experiences of women in the art world. The integration of Artsy API data allowed us to gather comprehensive insights and broaden the scope of our project, providing a more holistic view of women's contributions and challenges within the art community.
 
@@ -76,9 +74,8 @@ Artsy is an online platform that provides an extensive array of art-related serv
 
 Dataset Characteristics
 
-•	Data Volume: over 1 million artworks by more than 100,000 artists
+Data Volume is over 1 million artworks by more than 100,000 artists. Dataset includes:
 
-Dataset includes:
 -	Artist info: name, dates, nationality, bio
 -	Artwork info: title, medium, date, dimensions, provenance and exhibition history
 -	Gallery and museum info: name, location and exhibitions hosted
@@ -97,11 +94,10 @@ https://github.com/MuseumofModernArt/collection
 
 To extract the relevant data, we wanted from the two CSV files we had to go through a few manipulations, to make the data more readable:
 
-<<<<<<< HEAD
 ![Figure 6: Methodology \label{fig5}](./figs/method1.png)
-=======
+
 ![Figure 6: Methodology \label{fig6}](./figs/method1.png)
->>>>>>> 9d8dd712f38f9aca2b0921d208551d733a12f6c9
+
 
 Finally, we merged the two files ‘artworks MoMa’ and ‘artists MoMa’ to have them into a single csv file called ‘moma’
 
@@ -115,17 +111,14 @@ Working with the Artsy API was a more challenging endeavour. Between our final p
 
 The steps we followed are detailed in the chart below:
 
-<<<<<<< HEAD
 ![Figure 7: Methodology \label{fig7}](./figs/method2.png)
-=======
 ![Figure 8: Methodology \label{fig7}](./figs/method2.png)
 
-Here is a sample of the data: 
->>>>>>> 9d8dd712f38f9aca2b0921d208551d733a12f6c9
+Here is a sample of the data:
 
 ![Figure 9: Sample \label{fig9}](./figs/DataSample2.png)
 
-2. Merging The Data
+## Merging The Data
 
 Once we were done extracting all the relevant data from the Artsy API we had to merge all our different csv files to create a final csv file that contained all the relevant information.  
 
@@ -133,7 +126,7 @@ We proceeded in the following way:
 -	we merged the artists moma.csv and artworks moma. csv into a final moma.csv file
 -	we merged the artists artsy. csv and artworks artsy.csv into a final artsy.csv
 
-Then, we have to reshape the datasets so that they had the same column names. We saved these new datasets as moma_simple.csv and artsy_simple.csv. 
+Then, we have to reshape the datasets so that they had the same column names. We saved these new datasets as moma_simple.csv and artsy_simple.csv.
 
 Finally, we merged these two data sets and saved the final dataset into a csv file merged.csv.
 
@@ -155,7 +148,7 @@ Now equipped with our clean and tidy data frames, we can move onto the analysis 
 •	As women are given more independence in society, are women artists being more represented in museums?
 •	Why are there so little female artists? Or are they just underrepresented?
 
-Summary Statistics
+## Summary Statistics
 
 ### MoMa Dataset
 
@@ -211,7 +204,7 @@ Country Analysis
 
 We then performed an analysis to see if the phenomenon identified in the previous section was global or located in certain countries. We came up with the following results:
 
-![Figure 16: Map \label{fig16}](./figs/map.png) 
+![Figure 16: Map \label{fig16}](./figs/map.png)
 
 We first counted the number of male and female artist present in the MoMa dataset:
 
@@ -231,7 +224,7 @@ Creating the clusters and principal components of the analysis:
 
 ![Figure 17: Cluster \label{fig17}](./figs/cluster1.png)
 
-![Figure 18: Elbow \label{fig18}](./figs/elbow.png) 
+![Figure 18: Elbow \label{fig18}](./figs/elbow.png)
 
 Based on the elbow method applied to the clustering results, it becomes evident that selecting 2 or 3 clusters is appropriate for distinguishing gender in the dataset. The elbow point in the plot indicates a significant drop in the within-cluster sum of squares (WCSS) as the number of clusters increases, implying that the most substantial gains in clustering accuracy are achieved with 2 or 3 clusters. This finding aligns with the expectation that the majority of the data points predominantly belong to the male or female clusters, while only a small percentage is categorised as "other," suggesting a clear gender differentiation in the dataset.
 
@@ -278,7 +271,7 @@ The analysis conducted aimed to expand on the Guerrilla Girls' efforts by provid
 
 Finally, the art world must address the biases and inequalities that persist in order to create a more inclusive and representative environment. It is crucial to recognise and celebrate the contributions of female artists and artists from underrepresented groups, ensuring that their voices and perspectives are heard and appreciated. Only by embracing diversity and challenging the existing norms can the art world truly reflect the rich and varied experiences of humanity.
 
-CONTRIBUTIONS
+CONTRIBUTIONS:
+
 -	Téa: Data Extraction, Data Cleaning, Website Building, Visualisation, Documentation
 -	Nicholas: Visualisation
-
