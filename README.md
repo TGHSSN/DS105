@@ -1,6 +1,6 @@
 ## An Analysis of Female Artists
 
-Group Members: Tea Hassan
+Group Members: Tea Hassan, Nicholas Ngan
 
 ## Motivation
 
