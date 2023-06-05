@@ -100,12 +100,13 @@ https://github.com/MuseumofModernArt/collection
 
 To extract the relevant data, we wanted from the two CSV files we had to go through a few manipulations, to make the data more readable:
 
-
-![Figure 6: Methodology \label{fig5}](./figs/method1.png)
+![Figure 6: Methodology \label{fig6}](./figs/method1.png)
 
 Finally, we merged the two files ‘artworks MoMa’ and ‘artists MoMa’ to have them into a single csv file called ‘moma’
 
 Here is a sample of the data:
+
+![Figure 7: Sample \label{fig7}](./figs/datasample1.png)
 
 Data Collection Artsy API
 
@@ -113,10 +114,11 @@ Working with the Artsy API was a more challenging endeavour. Between our final p
 
 The steps we followed are detailed in the chart below:
 
+![Figure 8: Methodology \label{fig7}](./figs/method2.png)
 
-![Figure 7: Methodology \label{fig7}](./figs/method2.png)
+Here is a sample of the data: 
 
-Here is a sample of the data:
+![Figure 9: Sample \label{fig9}](./figs/DataSample2.png)
 
 2. Merging The Data
 
@@ -126,7 +128,7 @@ We proceeded in the following way:
 -	we merged the artists moma.csv and artworks moma. csv into a final moma.csv file
 -	we merged the artists artsy. csv and artworks artsy.csv into a final artsy.csv
 
-Then, we have to reshape the datasets so that they had the same column names. We saved these new datasets as moma_simple.csv and artsy_simple.csv. Here is a sample:
+Then, we have to reshape the datasets so that they had the same column names. We saved these new datasets as moma_simple.csv and artsy_simple.csv. 
 
 Finally, we merged these two data sets and saved the final dataset into a csv file merged.csv.
 
@@ -153,9 +155,13 @@ Summary Statistics
 
 ### MoMa Dataset
 
+![Figure 10: Summary \label{fig10}](./figs/SummaryMoma.png)
+
 These summary statistics for the MoMa Data provide a snapshot of a dataset containing information about art pieces. The dataset includes over 140,000 observations, with almost 100,000 unique titles and more than 13,000 unique artists. The most common title in the dataset is "Untitled," appearing over 8,500 times, while the artist "Eugène Atget" is the most frequent, with over 5,000 occurrences. The majority of the artists in the dataset are identified as American, and the gender distribution is heavily skewed towards male artists, with over 105,000 instances.
 
 ### Artsy Dataset
+
+![Figure 11: Summary \label{fig11}](./figs/SummaryArtsy.png)
 
 These summary statistics for the Artsy Data  provide an overview of a dataset containing information about art pieces. The dataset consists of approximately 140,000 observations. There are nearly 100,000 unique titles and over 17,000 unique IDs. The most common title in the dataset is "Untitled," appearing around 8,500 times. The majority of the artists in the dataset have French nationality, with a frequency of approximately 19,000. The dataset includes four unique gender categories, with "male" being the most common, occurring over 65,000 times. However, it's worth noting that the "Name" attribute has missing or unspecified top and frequency values, which implies some missing data or variability in the dataset. (add note about missing data)
 Proportion of Men vs Women Artists
@@ -173,7 +179,7 @@ Male artists: 105689
 
 Then, we plotted the results in a pie chart using plotly:
 
-
+![Figure 12: Pie \label{fig12}](./figs/Pie1.png)
 
 Unsurprisingly, the proprtion of male artists compared to female artists in the MoMa Data set is much higher.
 
@@ -183,19 +189,25 @@ Total artworks: 140851
 Female artists: 963
 Male artists: 65806
 
+![Figure 13: Pie \label{fig13](./figs/Pie2.png)
+
 For the Artsy Data, the proportion of women artists is even smaller. This is probably due to the fact that the Artsy API extract data from all time periods, starting in around the 1500s, where there were relatively no female artists as women had a very limited role in society. Since MoMa exposes Modern and Contemporary Art, which starts around the 1950s, it makes sense that they expose a lot more female artists.
 
 Finally, we combined the results to get a final count:
+
+![Figure 14: Pie \label{fig14}](./figs/Pie3.png)
+
+![Figure 15: Count \label{fig15}](./figs/countartworks.png)
 
 note: the other factor accounts for rows with missing data where the gender was not specified, it also encompasses gender neutral artists.
 
 From these final plots, it is clear that male artists are heavily overrepresented. What is interesting is that from the MoMA data we understand that male artists are more exposed in museums, as the MoMa provides us with data about what is in the MoMa collection but also in private collections and small galleries as the Arsty Database provides us with data on artworks from all sorts of collections, from very prestigious museums and galleries to more local and niche ones. Through the use of these two datasets we clearly see that the underrepresentation of women in art is a global phenomenon that needs to be addressed.
 
-
 Country Analysis
 
 We then performed an analysis to see if the phenomenon identified in the previous section was global or located in certain countries. We came up with the following results:
 
+![Figure 16: Map \label{fig16}](./figs/map.png) 
 
 We first counted the number of male and female artist present in the MoMa dataset:
 
@@ -213,10 +225,15 @@ We performed a k- means clustering analysis to see what factors affect the gende
 
 Creating the clusters and principal components of the analysis:
 
+![Figure 17: Cluster \label{fig17}](./figs/cluster1.png)
+
+![Figure 18: Elbow \label{fig18}](./figs/elbow.png) 
 
 Based on the elbow method applied to the clustering results, it becomes evident that selecting 2 or 3 clusters is appropriate for distinguishing gender in the dataset. The elbow point in the plot indicates a significant drop in the within-cluster sum of squares (WCSS) as the number of clusters increases, implying that the most substantial gains in clustering accuracy are achieved with 2 or 3 clusters. This finding aligns with the expectation that the majority of the data points predominantly belong to the male or female clusters, while only a small percentage is categorised as "other," suggesting a clear gender differentiation in the dataset.
 
 Results:
+
+![Figure 19: Final \label{fig19}](./figs/final1.png)
 
 
 We generated a scatter plot to visualise the clusters obtained from the k-means clustering analysis. It plots the data points in the two-dimensional space defined by the principal components 'PC1' and 'PC2'.  The code first plots the data points that belong to cluster 0, representing the 'Male' cluster, as blue dots. It then plots the data points belonging to cluster 1, representing the 'Female' cluster, as red dots. The 's' parameter determines the size of the dots, while the 'c' parameter assigns colours to the dots based on the cluster label. The plot is given a title of 'Clusters of Artworks by Gender' and labels the x-axis as 'PCA 1' and the y-axis as 'PCA 2'. The legend indicates the colours associated with each cluster label ('Male' and 'Female'). The plot provides a clear representation of how the data points are grouped based on the identified gender categories.
@@ -225,6 +242,7 @@ Unsurprisingly, we find a lot more data points associated with the male cluster 
 
 The analysis demonstrates that the data has been effectively mapped back after performing PCA and k-means clustering. By examining the PCA components used in the analysis, it becomes apparent that they mainly capture features related to the year of artwork release. Consequently, it can be inferred that artworks created by women are relatively more recent compared to those created by men, as indicated by the clustering results and the distribution of data points along the principal components.
 
+![Figure 20: Final \label{fig20}](./figs/final2.png)
 
 Analysis over Time
 
@@ -232,6 +250,9 @@ From this, we performed an analysis of over time to see when most artworks were 
 
 Here are our results:
 
+![Figure 21: Methodology \label{fig21}](./figs/century.png)
+
+![Figure 22: Methodology \label{fig22}](./figs/century2.png)
 
 Again, this is coherent with our hypothesis that there are more female artists as recently and that the proportion grows over time.
 
